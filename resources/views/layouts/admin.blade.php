@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Gestion Formation') }}</title>
 
-      <!-- plugins:css -->
+    <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
     <!-- endinject -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+     
     @livewireStyles
   </head>
 <body>
