@@ -55,7 +55,7 @@ Gestion de Formations is a web application developed with Laravel for managing c
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ElazzouziHassan/GestionDesFormations.git
+   git clone https://github.com/ElazzouziHassan/GestionDesFormations-final.git
 
 2. Install project dependencies:
     ```bash
