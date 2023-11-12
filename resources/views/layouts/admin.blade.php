@@ -18,7 +18,20 @@
     @livewireStyles
   </head>
 <body>
-    <h1>Hello, World !</h1>
+    
+  <div class="container-scroller">
+    @include('layouts.inc.admin.navbar')
+    <div class="container-fluid page-body-wrapper">
+      @include('layouts.inc.admin.sidebar')
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+          @yield('content')
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 
   <script src="{{ asset('admin/vendors/base/vendor.bundle.base.js') }}"></script>
