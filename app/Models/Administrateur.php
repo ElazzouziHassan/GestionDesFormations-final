@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Administrateur extends Model
 {
     use HasFactory;
+
+    protected $table = 'administrateur';
+
+    protected $fillable = [
+        'cin', 'nom', 'prenom', 'date_naissance', 'adresse', 'adresse_email', 'numero_telephone'
+    ];
+    
+    public function formations() {
+        return $this->hasMany('formation');
+    }
 }
