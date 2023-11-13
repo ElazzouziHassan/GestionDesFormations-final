@@ -12,7 +12,7 @@ class EtudiantController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.etudiant.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class EtudiantController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.etudiant.create');
     }
 
     /**
@@ -28,7 +28,7 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
