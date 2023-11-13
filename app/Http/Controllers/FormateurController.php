@@ -12,7 +12,7 @@ class FormateurController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.formateur.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class FormateurController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.formateur.create');
     }
 
     /**
@@ -28,7 +28,31 @@ class FormateurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'cin' => ['required'],
+                'nom' => ['required'],
+                'prenom' => ['required'],
+                'date_naissance' => ['required'],
+                'adresse' => ['required'],
+                'adresse_email' => ['required'],
+                'numero_telephone' => ['required'],
+            ]   
+        );
+
+        $etudiant = new Formateur;
+
+        $etudiant->cin = $validatedData['cin'];
+        $etudiant->nom = $validatedData['nom'];
+        $etudiant->prenom = $validatedData['prenom'];
+        $etudiant->date_naissance = $validatedData['date_naissance'];
+        $etudiant->adresse = $validatedData['adresse'];
+        $etudiant->adresse_email = $validatedData['adresse_email'];
+        $etudiant->numero_telephone = $validatedData['nom'];
+
+        $etudiant->save();
+
+        return redirect('admin/formateur')->with('message', 'Etudiant has been added successfully');
     }
 
     /**
