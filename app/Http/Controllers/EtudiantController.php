@@ -27,9 +27,23 @@ class EtudiantController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(EtudiantFormRequest $request)
+    public function store(Request $request)
     {
-        
+        $validatedData = $request->all();
+
+        $etudiant = new Etudiant;
+
+        $etudiant->cin = $validatedData['cin'];
+        $etudiant->nom = $validatedData['nom'];
+        $etudiant->prenom = $validatedData['prenom'];
+        $etudiant->date_naissance = $validatedData['date_naissance'];
+        $etudiant->adresse = $validatedData['adresse'];
+        $etudiant->adresse_email = $validatedData['adresse_email'];
+        $etudiant->numero_telephone = $validatedData['nom'];
+
+        $etudiant->save();
+
+        return redirect('admin/etudiant')->with('message', 'Etudiant has been added successfully');
     }
 
     /**
