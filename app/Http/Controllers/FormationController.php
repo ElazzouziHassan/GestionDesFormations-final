@@ -12,7 +12,7 @@ class FormationController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.formation.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class FormationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.formation.create');
     }
 
     /**
@@ -28,7 +28,27 @@ class FormationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'date_debut' => ['required'],
+                'prix' => ['required'],
+                'duree_en_mois' => ['required'],
+                'intitule' => ['required'],
+                'description' => ['required'],
+            ]   
+        );
+
+        $etudiant = new formation;
+
+        $etudiant->date_debut = $validatedData['date_debut'];
+        $etudiant->prix = $validatedData['prix'];
+        $etudiant->duree_en_mois = $validatedData['duree_en_mois'];
+        $etudiant->intitule = $validatedData['intitule'];
+        $etudiant->description = $validatedData['description'];
+    
+        $etudiant->save();
+
+        return redirect('admin/formation')->with('message', 'Etudiant has been added successfully');
     }
 
     /**
