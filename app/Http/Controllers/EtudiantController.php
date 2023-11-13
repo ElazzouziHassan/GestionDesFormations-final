@@ -29,7 +29,17 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->all();
+        $validatedData = $request->all(
+            [
+                'cin' => ['required'],
+                'nom' => ['required'],
+                'prenom' => ['required'],
+                'date_naissance' => ['required'],
+                'adresse' => ['required'],
+                'adresse_email' => ['required'],
+                'numero_telephone' => ['required'],
+            ]   
+        );
 
         $etudiant = new Etudiant;
 
