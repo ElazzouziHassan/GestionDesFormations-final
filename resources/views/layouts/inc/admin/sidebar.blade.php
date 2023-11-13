@@ -1,39 +1,24 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="{{ url('admin/dashboard') }}">
         <i class="mdi mdi-home menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="mdi mdi-view-headline menu-icon"></i>
-        <span class="menu-title">Form elements</span>
+      <a class="nav-link" href="{{ url('admin/formation') }}">
+        <span class="menu-title">Formations</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="mdi mdi-chart-pie menu-icon"></i>
-        <span class="menu-title">Charts</span>
+      <a class="nav-link" href="{{ url('admin/formateur') }}">
+        <span class="menu-title">Formateurs</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="mdi mdi-grid-large menu-icon"></i>
-        <span class="menu-title">Tables</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="mdi mdi-emoticon menu-icon"></i>
-        <span class="menu-title">Icons</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-        <span class="menu-title">Documentation</span>
+      <a class="nav-link" href="{{ url('admin/etudiant') }}">
+        <span class="menu-title">Etudiants</span>
       </a>
     </li>
   </ul>
