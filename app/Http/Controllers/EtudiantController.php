@@ -29,7 +29,7 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->all(
+        $validatedData = $request->validate(
             [
                 'cin' => ['required'],
                 'nom' => ['required'],
