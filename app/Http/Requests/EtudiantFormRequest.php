@@ -22,6 +22,7 @@ class EtudiantFormRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'id' =>[],
             'cin' => ['required'],
             'nom' => ['required'],
             'prenom' => ['required'],
@@ -29,6 +30,8 @@ class EtudiantFormRequest extends FormRequest
             'adresse' => ['required'],
             'adresse_email' => ['required'],
             'numero_telephone' => ['required'],
+            'created_at' => [],
+            'updated_at' => [],
         ];
     }
 }
