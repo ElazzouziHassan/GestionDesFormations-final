@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\FormateurController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +32,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group( function () {
     Route::get('etudiant', [EtudiantController::class, 'index']);
     Route::get('etudiant/create', [EtudiantController::class, 'create']);
     Route::post('etudiant', [EtudiantController::class, 'store']);
+
+    // Formateurs Routes :
+    Route::get('formateur', [FormateurController::class, 'index']);
+    Route::get('formateur/create', [FormateurController::class, 'create']);
+    Route::post('formateur', [FormateurController::class, 'store']);
 });
