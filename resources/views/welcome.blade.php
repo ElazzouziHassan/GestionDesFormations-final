@@ -155,10 +155,6 @@
     </div>
     <!-- Service End -->
 
-
-    
-    
-    
     
     {{-- scripts linked --}}
         <!-- Back to Top -->
