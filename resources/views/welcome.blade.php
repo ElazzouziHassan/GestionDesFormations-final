@@ -71,10 +71,16 @@
             </div>
     </nav>
     <!-- Navbar End -->
-
+    
+    <div class="container-fluid p-0 mb-5">
     <h1>Welcome page !</h1>
+    </div>
 
-        {{-- scripts linked --}}
+    
+    
+    
+    
+    {{-- scripts linked --}}
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
             <i class="bi bi-arrow-up"></i>
